@@ -2,12 +2,16 @@
 
 class Person {
     constructor(firstName, lastName, DoB) {
-        this.firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1)
+        this.firstName = capitalise(firstName)
         this.lastName = lastName
         this.DoB = DoB
         this.emails = []
         this.phoneNumbers = []
+
+    function capitalise(name) {
+        return name.charAt(0).toUpperCase() + name.slice(1)
     }
+}
     fullName() {
         return this.firstName + ' ' + this.lastName
     }
